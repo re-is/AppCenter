@@ -11,14 +11,14 @@ window.usbApps = {
 };
 
 window.pcApps = {
-	'Any To Icon': ['12.26', 'https://www.dropbox.com/s/v8g9ot3ar4xab8e/Any.zip?dl=0'],
+	'Any To Icon': ['12.26', 'https://www.dropbox.com/s/'],
 	'AutoIt': ['12.26', 'https://www.dropbox.com/s/'],
 	'CCleaner': ['12.26', 'https://www.dropbox.com/s/'],
 	'Defrag': ['12.26', 'https://www.dropbox.com/s/'],
 	'KeepAwake': ['12.26', 'https://www.dropbox.com/s/'],
 	'Photo Filter 10': ['12.26', 'https://www.dropbox.com/s/'],
 	'Resource Hacker': ['12.26', 'https://www.dropbox.com/s/'],
-	'Sublime Text 3': ['12.26', '12.26', 'https://www.dropbox.com/s/'],
+	'Sublime Text 3': ['12.26', 'https://www.dropbox.com/s/gt6i8nvdnwoies7/SublimeText-12.26.zip?dl=0'],
 	'uTorrent': ['12.26', 'https://www.dropbox.com/s/'],
 	'Volumouse': ['12.26', 'https://www.dropbox.com/s/'],
 	'WinRAR': ['12.26', 'https://www.dropbox.com/s/'],
