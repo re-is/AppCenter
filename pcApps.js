@@ -1,5 +1,5 @@
 window.pcApps = {
-	'Any To Icon': ['https://www.dropbox.com/s/v8g9ot3ar4xab8e/Any.zip?dl=0', '12.25'],
+	'Any To Icon': ['12.25', 'https://www.dropbox.com/s/v8g9ot3ar4xab8e/Any.zip?dl=0'],
 	'AutoIt': [],
 	'CCleaner': [],
 	'Defrag': [],
