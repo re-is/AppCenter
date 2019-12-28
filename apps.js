@@ -1,27 +1,27 @@
 window.usbApps = {
-	'Intel HD 5500': ['12.26', 'https://www.dropbox.com/s/'],
-	'DirectX9': ['12.26', 'https://www.dropbox.com/s/'],
-	'Google Chrome': ['12.26', 'https://www.dropbox.com/s/'],
-	'Firefox': ['12.26', 'https://www.dropbox.com/s/'],
-	'Realtek HD Audio': ['12.26', 'https://www.dropbox.com/s/'],
-	'VLC': ['12.26', 'https://www.dropbox.com/s/'],
-	'Office 2016': ['12.26', 'https://www.dropbox.com/s/'],
-	'ESET Kódmásoló': ['12.26', 'https://www.dropbox.com/s/'],
-	'ESET Smart Security': ['12.26', 'https://www.dropbox.com/s/']
+	'Intel HD 5500': ['', 'offline'],
+	'DirectX': ['9.c', 'offline'],
+	'Google Chrome': ['', 'https://github.com/re-is/AppCenter/raw/master/chrome.zip'],
+	'Firefox': ['', 'https://github.com/re-is/AppCenter/raw/master/firefox.zip'],
+	'Realtek HD Audio': ['2.82', 'offline'],
+	'VLC': ['3.0.4', 'offline'],
+	'Office': ['2016', 'offline'],
+	'ESET Kódmásoló': ['12.27', 'https://github.com/re-is/AppCenter/raw/master/eset-copier.zip'],
+	'ESET Smart Security': ['', 'https://github.com/re-is/AppCenter/raw/master/eset.zip']
 };
 
 window.pcApps = {
-	'Any To Icon': ['12.26', 'https://www.dropbox.com/s/38n59xa8x6ai53t/Any-12.26.zip?dl=0'],
-	'AutoIt': ['12.26', 'https://www.dropbox.com/s/1gf6wl8s6ay8lmf/Autoit-12.26.zip?dl=0'],
-	'CCleaner': ['12.26', 'https://www.dropbox.com/s/c0qym4hupunxen9/CCleaner-12.26.zip?dl=0'],
-	'Defrag': ['12.26', 'https://www.dropbox.com/s/4z7rxdywg9t80h6/Defrag-12.26.zip?dl=0'],
-	'KeepAwake': ['12.26', 'https://www.dropbox.com/s/ymxmr5iakam7tbn/KeepAwake-12.26.zip?dl=0'],
-	'Photo Filter 10': ['12.26', 'https://www.dropbox.com/s/j1egsehzm988xj1/Photo-12.26.zip?dl=0'],
-	'Resource Hacker': ['12.26', 'https://www.dropbox.com/s/a18w9e3xhfxjw2g/ResHacker-12.26.zip?dl=0'],
-	'Sublime Text 3': ['12.26', 'https://www.dropbox.com/s/gt6i8nvdnwoies7/SublimeText-12.26.zip?dl=0'],
-	'uTorrent': ['12.26', 'https://www.dropbox.com/s/206iqnpdicgo1rc/uTorrent-12.26.zip?dl=0'],
-	'Volumouse': ['12.26', 'https://www.dropbox.com/s/cp6el4g2bbhzob8/Volumouse-12.26.zip?dl=0'],
-	'WinRAR': ['12.26', 'https://www.dropbox.com/s/'],
-	'WinSCP': ['12.26', 'https://www.dropbox.com/s/'],
-	'WU Switcher': ['12.26', 'https://www.dropbox.com/s/']
+	'Any To Icon': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/Any-12.26.zip'],
+	'AutoIt': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/Autoit-12.26.zip'],
+	'CCleaner': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/CCleaner-12.26.zip'],
+	'Defrag': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/Defrag-12.26.zip'],
+	'KeepAwake': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/KeepAwake-12.26.zip'],
+	'Photo Filter 10': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/Photo-12.26.zip'],
+	'Resource Hacker': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/ResHacker-12.26.zip'],
+	'Sublime Text 3': ['12.26#2', 'https://github.com/re-is/AppCenter/raw/master/'],
+	'uTorrent': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/uTorrent-12.26.zip'],
+	'Volumouse': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/Volumouse-12.26.zip'],
+	'WinRAR': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/Win-Rar-12.26.zip'],
+	'WinSCP': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/WinScp-12.26.zip'],
+	'WU Switcher': ['12.26', 'https://github.com/re-is/AppCenter/raw/master/wu-12.26.zip']
 };
