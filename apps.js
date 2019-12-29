@@ -6,7 +6,7 @@ window.usbApps = {
 	'Realtek HD Audio': ['2.82', 'offline-realtek.exe'],
 	'VLC': ['3.0.4', 'offline-vlc-3.0.4-win64.exe'],
 	'Office': ['2016', 'offline-office-2016.exe'],
-	'ESET Kódmásoló': ['12.27', 'eset-copier.zip'],
+	'ESET Copier': ['12.27', 'eset-copier.zip'],
 	'ESET Smart Security': ['Legújabb', 'eset.zip']
 };
 
