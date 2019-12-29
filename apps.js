@@ -10,7 +10,7 @@ window.usbApps = {
 };
 
 window.pcApps = {
-	'Windows activator': ['', 'Activator-12.29.zip'],
+	'Windows activator': ['', 'Activ-12.29.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
 	'AutoIt': ['12.26', 'Autoit-12.26.zip'],
 	'CCleaner': ['12.26', 'CCleaner-12.26.zip'],
