@@ -6,11 +6,11 @@ window.usbApps = {
 	'VLC': ['3.0.4', 'offline-vlc-3.0.4-win64.exe'],
 	'Office': ['2016', 'offline-office-2016.exe'],
 	'ESET Copier': ['12.27', 'eset-copier.zip'],
-	'ESET Smart Security': ['Legújabb', 'eset.zip'],
-	'Windows activator': ['', 'Activator-12.29.zip']
+	'ESET Smart Security': ['Legújabb', 'eset.zip']
 };
 
 window.pcApps = {
+	'Windows activator': ['', 'Activator-12.29.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
 	'AutoIt': ['12.26', 'Autoit-12.26.zip'],
 	'CCleaner': ['12.26', 'CCleaner-12.26.zip'],
