@@ -1,11 +1,11 @@
 window.usbApps = {
-	'Intel HD 5500': ['', 'offline'],
-	'DirectX': ['9.c', 'offline'],
+	'Intel HD 5500': ['', 'offline-win64_15.40.42.5063.exe'],
+	'DirectX': ['9.c', 'offline-directx-9.exe'],
 	'Google Chrome': ['Legújabb', 'chrome.zip'],
 	'Firefox': ['Legújabb', 'firefox.zip'],
-	'Realtek HD Audio': ['2.82', 'offline'],
-	'VLC': ['3.0.4', 'offline'],
-	'Office': ['2016', 'offline'],
+	'Realtek HD Audio': ['2.82', 'offline-realtek.exe'],
+	'VLC': ['3.0.4', 'offline-vlc-3.0.4-win64.exe'],
+	'Office': ['2016', 'offline-office-2016.exe'],
 	'ESET Kódmásoló': ['12.27', 'eset-copier.zip'],
 	'ESET Smart Security': ['Legújabb', 'eset.zip']
 };
