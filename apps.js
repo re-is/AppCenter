@@ -23,5 +23,6 @@ window.pcApps = {
 	'Volumouse': ['12.26', 'Volumouse-12.26.zip'],
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
 	'WinSCP': ['12.26', 'WinScp-12.26.zip'],
-	'WU Switcher': ['12.26', 'wu-12.26.zip']
+	'WU Switcher': ['12.26', 'wu-12.26.zip'],
+	'DPI + Font': ['12.29', 'dpi-12.29.zip']
 };
