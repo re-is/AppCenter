@@ -15,7 +15,7 @@ window.pcApps = {
 	'AutoIt': ['12.26', 'Autoit-12.26.zip'],
 	'CCleaner': ['12.26', 'CCleaner-12.26.zip'],
 	'Defrag': ['12.26', 'Defrag-12.26.zip'],
-	'KeepAwake': ['12.26', 'KeepAwake-12.26.zip'],
+	'KeepAwake': ['12.26', 'KeepAwake-12.29.zip'],
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
 	'Resource Hacker': ['12.26', 'ResHacker-12.26.zip'],
 	'Sublime Text 3': ['12.29', 'Sublime-12.29.zip'],
