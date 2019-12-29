@@ -1,13 +1,13 @@
 window.usbApps = {
 	'Intel HD 5500': ['', 'offline'],
 	'DirectX': ['9.c', 'offline'],
-	'Google Chrome': ['', 'chrome.zip'],
-	'Firefox': ['', 'firefox.zip'],
+	'Google Chrome': ['Legújabb', 'chrome.zip'],
+	'Firefox': ['Legújabb', 'firefox.zip'],
 	'Realtek HD Audio': ['2.82', 'offline'],
 	'VLC': ['3.0.4', 'offline'],
 	'Office': ['2016', 'offline'],
 	'ESET Kódmásoló': ['12.27', 'eset-copier.zip'],
-	'ESET Smart Security': ['', 'eset.zip']
+	'ESET Smart Security': ['Legújabb', 'eset.zip']
 };
 
 window.pcApps = {
