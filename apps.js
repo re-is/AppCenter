@@ -22,7 +22,7 @@ window.pcApps = {
 	'uTorrent': ['12.26', 'uTorrent-12.26.zip'],
 	'Volumouse': ['12.26', 'Volumouse-12.26.zip'],
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
-	'WinSCP': ['12.26', 'WinScp-12.26.zip'],
+	'WinSCP': ['04.25', 'WinSCP-04.25.zip'],
 	'WU Switcher': ['04.20', 'WU-Switcher-04.20.zip'],
 	'DPI + Font': ['12.29', 'dpi-12.29.zip']
 };
