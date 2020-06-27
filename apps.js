@@ -24,5 +24,6 @@ window.pcApps = {
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
 	'WinSCP': ['04.25', 'WinSCP-04.25.zip'],
 	'WU Switcher': ['04.20', 'WU-Switcher-04.20.zip'],
-	'DPI + Font': ['12.29', 'dpi-12.29.zip']
+	'DPI + Font': ['12.29', 'dpi-12.29.zip'],
+	'Context Editor': ['06.27', 'ConEdit-06.27.zip']
 };
