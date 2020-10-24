@@ -5,7 +5,7 @@ window.usbApps = {
 	'Firefox': ['Legújabb', 'firefox.zip'],
 	'VLC': ['3.0.4', 'offline-vlc-3.0.4-win64.exe'],
 	'Office': ['2016', 'offline-office-2016.exe'],
-	'ESET Copier': ['07.02', 'ESET-Copier-20.0702.zip'],
+	'ESET Copier': ['10.24', 'ESET-Copier-20.1024.zip'],
 	'ESET Smart Security': ['Legújabb', 'eset.zip']
 };
 
