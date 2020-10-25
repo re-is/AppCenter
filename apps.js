@@ -10,7 +10,7 @@ window.usbApps = {
 };
 
 window.pcApps = {
-	'Microsoft Activator': ['10.2.8', 'Activator-2020.zip'],
+	'Microsoft Activator': ['10.2.8', 'Activator-No-Defender.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
 	'AutoIt': ['12.26', 'Autoit-12.26.zip'],
 	'CCleaner': ['12.26', 'CCleaner-12.26.zip'],
