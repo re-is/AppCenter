@@ -19,7 +19,7 @@ window.pcApps = {
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
 	'Resource Hacker': ['12.26', 'ResHacker-12.26.zip'],
 	'Sublime Text 3': ['11.15', 'Sublime-11.15.zip'],
-	'uTorrent': ['12.26', 'uTorrent-12.26.zip'],
+	'uTorrent': ['11.15', 'uTorrent-11.15.zip'],
 	'Volumouse': ['12.26', 'Volumouse-12.26.zip'],
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
 	'WinSCP': ['04.25', 'WinSCP-04.25.zip'],
