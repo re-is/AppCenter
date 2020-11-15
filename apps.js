@@ -13,7 +13,7 @@ window.pcApps = {
 	'Microsoft Activator': ['10.2.8', 'MS.activator.noDefender.10.31.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
 	'AutoIt': ['12.26', 'Autoit-12.26.zip'],
-	'CCleaner': ['12.26', 'CCleaner-12.26.zip'],
+	'CCleaner': ['11.15', 'CCleaner-11.15.zip'],
 	'Defrag': ['12.26', 'Defrag-12.26.zip'],
 	'KeepAwake': ['12.26', 'KeepAwake-12.31.zip'],
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
