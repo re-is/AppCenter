@@ -25,5 +25,5 @@ window.pcApps = {
 	'WinSCP': ['04.25', 'WinSCP-04.25.zip'],
 	'WU Switcher': ['04.20', 'WU-Switcher-04.20.zip'],
 	'DPI + Font': ['12.29', 'dpi-12.29.zip'],
-	'Context Editor': ['06.27', 'ConEdit-06.27.zip']
+	'Context Editor': ['11.21', 'ContextEditor-20.11.21.zip']
 };
