@@ -3,7 +3,7 @@ window.usbApps = {
 	'Nvidia GeForce': ['Legújabb', 'offline-geforce.bat'],
 	'Google Chrome': ['Legújabb', 'chrome.zip'],
 	'Firefox': ['Legújabb', 'firefox.zip'],
-	'VLC': ['3.0.4', 'offline-vlc-3.0.4-win64.exe'],
+	'VLC': ['3.0.11', 'offline-vlc-3.0.11-win64.exe'],
 	'Office': ['2016', 'offline-office-2016.exe'],
 	'ESET Copier': ['11.29', 'ESET-Copier-20.1129.zip'],
 	'ESET Smart Security': ['Legújabb', 'eset.zip']
