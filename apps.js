@@ -1,5 +1,5 @@
 window.usbApps = {
-	'Intel HD 5500': ['Legújabb', 'offline-win64_15.40.42.5063.exe'],
+	'Intel HD 5500': ['Legújabb', 'offline-Intel-HD5500.exe'],
 	'Nvidia GeForce': ['Legújabb', 'offline-geforce.bat'],
 	'Google Chrome': ['Legújabb', 'chrome.zip'],
 	'Firefox': ['Legújabb', 'firefox.zip'],
