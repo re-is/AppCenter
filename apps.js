@@ -19,7 +19,7 @@ window.pcApps = {
 	'KeepAwake': ['12.26', 'KeepAwake-12.31.zip'],
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
 	'Resource Hacker': ['12.26', 'ResHacker-12.26.zip'],
-	'Sublime Text 3': ['03.25', 'Sublime-03.25.zip'],
+	'Sublime Text 3': ['04.04', 'Sublime-04.04.zip'],
 	'uTorrent': ['11.15', 'uTorrent-11.15.zip'],
 	'Volumouse': ['12.26', 'Volumouse-12.26.zip'],
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
