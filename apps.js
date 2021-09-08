@@ -13,7 +13,7 @@ window.pcApps = {
 	'Activator': ['10.2.8', 'Activator.zip'],
 	'Activator No.Defender': ['10.2.8', 'Activator.No.Defender.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
-	'AutoIt': ['12.26', 'Autoit-12.26.zip'],
+	'AutoIt': ['12.26', 'AutoIt.09.08.zip'],
 	'CCleaner': ['12.27', 'ccleaner-12.27.zip'],
 	'Defrag': ['12.26', 'Defrag-12.26.zip'],
 	'WinPlus': ['07.18', 'WinPlus-07.18.zip'],
