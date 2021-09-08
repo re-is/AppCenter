@@ -14,7 +14,7 @@ window.pcApps = {
 	'Activator No.Defender': ['10.2.8', 'Activator.No.Defender.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
 	'AutoIt': ['09.08', 'AutoIt.09.08.zip'],
-	'CCleaner': ['12.27', 'ccleaner-12.27.zip'],
+	'CCleaner': ['5.83', 'CCleaner.09.08.zip'],
 	'Defrag': ['12.26', 'Defrag-12.26.zip'],
 	'WinPlus': ['07.18', 'WinPlus-07.18.zip'],
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
