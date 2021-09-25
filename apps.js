@@ -15,6 +15,7 @@ window.pcApps = {
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
 	'AutoIt': ['09.25', 'Auto-IT.09.25.zip'],
 	'CCleaner': ['5.83', 'CCleaner.09.08.zip'],
+	'DiskInfo': ['8.12.8', 'DiskInfo.09.25.zip'],
 	'Defrag': ['12.26', 'Defrag-12.26.zip'],
 	'WinPlus': ['07.18', 'WinPlus-07.18.zip'],
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
