@@ -17,7 +17,7 @@ window.pcApps = {
 	'CCleaner': ['5.83', 'CCleaner.09.08.zip'],
 	'DiskInfo': ['8.12.8', 'DiskInfo.09.25.zip'],
 	'Defrag': ['12.26', 'Defrag-12.26.zip'],
-	'WinPlus': ['07.18', 'WinPlus-07.18.zip'],
+	'WinPlus': ['10.08', 'WinPlus-10.08.zip'],
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
 	'Resource Hacker': ['12.26', 'ResHacker-12.26.zip'],
 	'Sublime Text 3': ['09.25', 'Sublime.09.25.zip'],
