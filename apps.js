@@ -22,7 +22,7 @@ window.pcApps = {
 	'Resource Hacker': ['12.26', 'ResHacker-12.26.zip'],
 	'Sublime Text 3': ['09.25', 'Sublime.09.25.zip'],
 	'uTorrent': ['11.15', 'uTorrent-11.15.zip'],
-	'Volumouse': ['12.26', 'Volumouse-12.26.zip'],
+	'Volumouse': ['01.18', 'Volumouse-01-18.zip'],
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
 	'WinSCP': ['03.25', 'WinSCP-03.25.zip'],
 	'WU Switcher': ['04.20', 'WU-Switcher-04.20.zip'],
