@@ -20,7 +20,7 @@ window.pcApps = {
 	'WinPlus': ['11.18', 'WinPlus-11.18.zip'],
 	'Photo Filter 10': ['12.26', 'Photo-12.26.zip'],
 	'Resource Hacker': ['12.26', 'ResHacker-12.26.zip'],
-	'Sublime Text 3': ['09.25', 'Sublime.09.25.zip'],
+	'Sublime Text 3': ['07.10', 'Sublime-07.10.zip'],
 	'uTorrent': ['11.15', 'uTorrent-11.15.zip'],
 	'Volumouse': ['01.18', 'Volumouse-01-18.zip'],
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
