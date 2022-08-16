@@ -24,7 +24,7 @@ window.pcApps = {
 	'uTorrent': ['11.15', 'uTorrent-11.15.zip'],
 	'Volumouse': ['01.18', 'Volumouse-01-18.zip'],
 	'WinRAR': ['12.26', 'Win-Rar-12.26.zip'],
-	'WinSCP': ['03.25', 'WinSCP-03.25.zip'],
+	'WinSCP': ['08.16', 'WinSCP-08.16.zip'],
 	'WU Switcher': ['04.20', 'WU-Switcher-04.20.zip'],
 	'DPI + Font': ['12.29', 'dpi-12.29.zip'],
 	'Context Editor': ['22.05.12', 'Context-Editor.zip']
