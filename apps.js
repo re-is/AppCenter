@@ -9,7 +9,7 @@ window.usbApps = {
 	'ESET Smart Security': ['Legújabb', 'eset.zip']
 };
 
-window.pcApps = {
+window.webApps = {
 	'Activator': ['10.2.8', 'Activator.zip'],
 	'Activator No.Defender': ['10.2.8', 'Activator.No.Defender.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
