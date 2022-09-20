@@ -1,17 +1,15 @@
 window.usbApps = {
 	'Intel HD 5500': ['Legújabb', 'offline-Intel-HD5500.exe'],
 	'Nvidia GeForce': ['Legújabb', 'offline-geforce.bat'],
-	'Google Chrome': ['Legújabb', 'chrome.zip'],
-	'Firefox': ['Legújabb', 'firefox.zip'],
 	'VLC': ['3.0.16', 'offline-vlc-3.0.16-win64.exe'],
-	'Office': ['2016', 'offline-office-2016.exe'],
-	'ESET Copier': ['07.08', 'ESET-Copier-21.0708.zip'],
-	'ESET Smart Security': ['Legújabb', 'eset.zip']
+	'Office': ['2016', 'offline-office-2016.exe']
 };
 
 window.webApps = {
 	'Activator': ['10.2.8', 'Activator.zip'],
 	'Activator No.Defender': ['10.2.8', 'Activator.No.Defender.zip'],
+	'Google Chrome': ['Legújabb', 'chrome.zip'],
+	'Firefox': ['Legújabb', 'firefox.zip'],
 	'Any To Icon': ['12.26', 'Any-12.26.zip'],
 	'AutoIt': ['22.07.10', 'AutoIt-07.10.zip'],
 	'CCleaner': ['5.83', 'CCleaner.09.08.zip'],
@@ -27,5 +25,7 @@ window.webApps = {
 	'WinSCP': ['08.16', 'WinSCP-08.16.zip'],
 	'WU Switcher': ['22.09.20', 'WU-Switcher.zip'],
 	'DPI + Font': ['12.29', 'dpi-12.29.zip'],
-	'Context Editor': ['22.05.12', 'Context-Editor.zip']
+	'Context Editor': ['22.05.12', 'Context-Editor.zip'],
+	'ESET Smart Security': ['Legújabb', 'eset.zip'],
+	'ESET Copier': ['21.07.08', 'ESET-Copier-21.0708.zip']
 };
