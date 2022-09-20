@@ -1,8 +1,10 @@
 window.usbApps = {
-	'Intel HD 5500': ['Legújabb', 'offline-Intel-HD5500.exe'],
 	'Nvidia GeForce': ['Legújabb', 'offline-geforce.bat'],
 	'VLC': ['3.0.16', 'offline-vlc-3.0.16-win64.exe'],
-	'Office': ['2016', 'offline-office-2016.exe']
+	'Office': ['2016', 'offline-office-2016.exe'],
+	'Intel HD 5500 illesztőprogram': ['Legújabb', 'offline-Intel-HD5500.exe'],
+	'Intel Iris X illesztőprogram': ['Legújabb', 'offline-igfx_win_100.9864.exe'],
+	'Intel Graphics vezérlőpult': ['Legújabb', 'offline-IntelGraphicsExperience_1.100.3370.AppxBundle']
 };
 
 window.webApps = {
