@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="HU">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<script type="text/javascript" src="https://cdn.rawgit.com/re-is/ScriptCenter/main/js/shl-script-loader.js" link="https://raw.githubusercontent.com/re-is/shl.min/main/shl.220511.min.js"></script>
+		<script type="text/javascript">try{window.shl = new SuperHtaLibrary()}catch(e){window.alert("Nincs internet kapcsolat!");window.close()}</script>
+		<style type="text/css">
+
+			html * {
+				font-family: "Tahoma", sans-serif;
+				font-size: 18px;
+				color: #333;
+			}
+
+			#Application {
+				position: absolute;
+				overflow: hidden;
+				display: inline-flex;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #fff;
+			}
+
+			.apps-blocks {
+				width: 50%;
+				margin: 8px;
+			}
+
+				.titles {
+					height: 22px;
+					padding-left: 5px;
+					padding-top: 2px;
+					margin-bottom: 2px;
+					background-color: #ddd;
+					border-radius: 3px;
+					font-family: "Ebrima";
+					font-size: 16px;
+					font-weight: bold;
+				}
+
+				.app-items {
+					padding-left: 6px;
+					height: 26px;
+					line-height: 26px;
+					border-radius: 3px;
+					cursor: pointer;
+				}
+
+					.app-version {
+						color: #777;
+						font-style: italic;
+						float: right;
+						padding-right: 10px;
+					}
+
+					.app-items:hover, .app-items:hover .app-version {
+						background-color: #555;
+						color: #fff;
+					}
+
+				.operators {
+					display: inline-block;
+					width: 15px;
+					line-height: 0px;
+					text-align: center;
+					margin-right: 5px;
+					font-family: "Ebrima";
+					font-weight: bold;
+					color: #d32;
+				}
+
+			#overlay {
+				position: absolute;
+				display: none;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(200,200,200,0.4);
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="Application">
+			<div class="apps-blocks usb-apps"><div class="titles">USB</div></div>
+			<div class="apps-blocks web-apps"><div class="titles">WEB</div></div>
+			<div id="overlay"></div>
+		</div>
+		<script type="text/javascript">
+
+			// Adat lekérése:
+			eval(shl.obj.readFile('https://raw.githubusercontent.com/re-is/AppCenter/master/AppCenter.js'));
+
+			// Változók:
+			window.g = {
+				programFilesApps: 'C:\\Program Files\\Apps\\',
+				wss: shl.hta.activeX('wss'),
+				usbCounter: 0,
+				webCounter: 0,
+				mainCounter: 0,
+				appCollection: []
+			};
+
+			// Lekérés Registry-ből:
+			function readApp(i) {
+				let installed = false;
+				try { g.wss.RegRead('HKCU\\Software\\Apps\\' + g.appCollection[i].appName); installed = true } catch(e) {}
+				return installed;
+			}
+
+			// Ha törölve lett az app:
+			function deletedApp(i) {
+				let deleted = false;
+				try { g.wss.RegRead('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + g.appCollection[i].appName); deleted = true } catch(e) {}
+				return deleted;
+			}
+
+			// Appra kattintáskor:
+			function selectApp(i) {
+				let overlay = shl.elem.id('overlay'),
+					operator = shl.elem.class('op-' + i),
+					appName = g.appCollection[i].appName,
+					appFolder = (g.programFilesApps + appName);
+				//----------------------------------------------------------------------------------
+				// Telepítés:
+				//----------------------------------------------------------------------------------
+				if (!readApp(i)) {
+					// Kérdés:
+					shl.msg.confirm('Telepíted ezt?\n\n' + appName + '\n', function() {
+						overlay.style.display = 'block';
+						// USB appok:
+						if (i < g.usbCounter) {
+							// Offline:
+							if (shl.hta.find(g.appCollection[i].pathName, 'offline-')) {
+								shl.hta.runCmd('\
+									for %%a in (D E F G H I J K L M N O P Q R S T U V W X Y Z) do vol %%a: 2>nul |find "WINDOWS" >nul && set drv=%%a:\r\n\
+									start "" "%drv%\\Apps\\general\\' + g.appCollection[i].pathName.split('offline-')[1] + '"\r\n\
+									ping 127.0.0.1 -n 2 > nul\
+								');
+								shl.obj.taskkill('cmd.exe');
+							}
+							// Online:
+							else {
+								// Letöltés:
+								let zip = shl.obj.download(g.appCollection[i].pathName, '%temp%\\' + appName + '.zip');
+								// Kibontás:
+								shl.obj.unZip(zip, appFolder);
+								// *.exe indítása:
+								shl.hta.runCmd('\
+									for /r "' + appFolder + '" %%a in (*.exe) do start "" "%%a"\r\n\
+									ping 127.0.0.1 -n 3 > nul\r\n\
+									del "' + zip + '"\
+								');
+								// Következő bejelentkezéskor törlés a ProgramFiles-ból:
+								g.wss.RegWrite('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + appName, 'cmd.exe /c rd /s /q "' + appFolder + '"');
+							}
+							// Befejezés:
+							operator.innerText = '✓';
+							operator.style.color = '#0a4';
+							g.wss.RegWrite('HKCU\\Software\\Apps\\' + appName, 'Installed', 'REG_SZ');
+							overlay.style.display = 'none';
+						}
+						// WEB appok:
+						else {
+							let zip = shl.obj.download(g.appCollection[i].pathName, '%temp%\\' + appName + '.zip');
+							// Kibontás:
+							shl.obj.unZip(zip, appFolder);
+							setTimeout(function() { shl.obj.del(zip) }, 2000);
+							// install fájlok futtatása:
+							if (shl.obj.exist(appFolder + '\\setup\\install.bat')) shl.hta.runCmd(appFolder + '\\setup\\install.bat');
+							if (shl.obj.exist(appFolder + '\\setup\\install.reg')) shl.hta.runReg(appFolder + '\\setup\\install.reg');
+							if (shl.obj.exist(appFolder + '\\setup\\license.txt')) g.wss.Run('notepad.exe "' + appFolder + '\\setup\\license.txt"');
+							// Parancsikon másolása az asztalra:
+							shl.hta.runCmd('xcopy "' + appFolder + '\\setup\\*.lnk" "%userprofile%\\Desktop\\"');
+							// Befejezés:
+							operator.innerText = '✓';
+							operator.style.color = '#0a4';
+							g.wss.RegWrite('HKCU\\Software\\Apps\\' + appName, 'Installed', 'REG_SZ');
+							overlay.style.display = 'none';
+						}
+					});
+				}
+				//----------------------------------------------------------------------------------
+				// Eltávolítás:
+				//----------------------------------------------------------------------------------
+				else shl.msg.confirm('Biztos, hogy eltávolítod ezt?\n\n' + appName + '\n', function() {
+					overlay.style.display = 'block';
+					if (shl.obj.exist(appFolder + '\\setup\\uninstall.bat')) shl.hta.runCmd(appFolder + '\\setup\\uninstall.bat');
+					if (shl.obj.exist(appFolder + '\\setup\\uninstall.reg')) shl.hta.runReg(appFolder + '\\setup\\uninstall.reg');
+					setTimeout(function() {
+						g.wss.RegDelete('HKCU\\Software\\Apps\\' + appName);
+						g.wss.RegWrite('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + appName, 'cmd.exe /c rd /s /q "' + appFolder + '"');
+						shl.elem.class('app-item-' + i).onclick = function() { shl.msg.ok('Az újratelepítéshez ki kell jelentkezni!') };
+						operator.innerText = '⮜';
+						operator.style.color = '#26d';
+						overlay.style.display = 'none';
+					}, 1000);
+				});
+			}
+
+			// Megnyitás:
+			shl.wnd.open({
+				icon		: 'https://raw.githubusercontent.com/re-is/AppCenter/master/center.ico',
+				title		: 'AppCenter',
+				type		: 'tool',
+				titlebar	: true,
+				width		: 800,
+				height		: 40,
+				fadein		: [300, 300]
+			}, function(opened, loaded) {
+
+				if (loaded) {
+
+					// Apps mappa készítése, ha nincs:
+					if (!shl.obj.exist(g.programFilesApps)) shl.obj.createFolder(g.programFilesApps);
+
+					let usbhtml = '', webhtml = '';
+
+					// window.usbApps kibontása:
+					shl.hta.loopIn(usbApps, function(appName, file) {
+						let pathName = (shl.obj.exist(file.name, 'offline-') ? file.name : ('https://github.com/re-is/AppCenter/raw/master/' + file.name));
+						usbhtml += ('<div class="app-items app-item-' + g.mainCounter + '" onclick="selectApp(' + g.mainCounter + ')"><div class="operators op-' + g.mainCounter + '">×</div>' + appName + '<span class="app-version">' + file.version + '</span></div>');
+						g.appCollection[g.mainCounter] = { appName: appName, pathName: pathName };
+						g.usbCounter++;
+						g.mainCounter++;
+					});
+					shl.elem.class('usb-apps').innerHTML += usbhtml;
+
+					// window.webApps kibontása:
+					shl.hta.loopIn(webApps, function(appName, file) {
+						let pathName = ('https://github.com/re-is/AppCenter/raw/master/' + file.name);
+						webhtml += ('<div class="app-items app-item-' + g.mainCounter + '" onclick="selectApp(' + g.mainCounter + ')"><div class="operators op-' + g.mainCounter + '">×</div>' + appName + '<span class="app-version">' + file.version + '</span></div>');
+						g.appCollection[g.mainCounter] = { appName: appName, pathName: pathName };
+						g.webCounter++;
+						g.mainCounter++;
+					});
+					shl.elem.class('web-apps').innerHTML += webhtml;
+
+					// Ablak magasság beállítása (app: 23px + titles: 42px):
+					shl.wnd.setSize(800, (((g.usbCounter > g.webCounter) ? g.usbCounter : g.webCounter) * 26) + 42);
+
+					// App lekérése registryből:
+					shl.hta.loopPlus(g.mainCounter, function(i) {
+						let opr = shl.elem.class('op-' + i);
+						// Registry olvasása:
+						if (readApp(i)) {
+							opr.innerText = '✓';
+							opr.style.color = '#0a4';
+						}
+						else if (deletedApp(i)) {
+							opr.innerText = '⮜';
+							opr.style.color = '#26d';
+							shl.elem.class('app-item-' + i).onclick = function() { shl.msg.ok('Az újratelepítéshez ki kell jelentkezni!') };
+						}
+					});
+				}
+			});
+
+			shl.style.fadein.layer({'background-color': '#fff'});
+
+		</script>
+	</body>
+</html>
