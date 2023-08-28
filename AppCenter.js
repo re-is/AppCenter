@@ -1,10 +1,11 @@
 window.usbApps = {
-	'Nvidia GeForce'				: { version: 'Legújabb',	name: 'offline-geforce.bat' },
-	'VLC'							: { version: '3.0.16',		name: 'offline-vlc-3.0.16-win64.exe' },
-	'Office'						: { version: '2016',		name: 'offline-office-2016.exe' },
-	'Intel HD 5500 illesztőprogram'	: { version: 'Legújabb',	name: 'offline-win64_15.40.5171.exe' },
-	'Intel Iris X illesztőprogram'	: { version: 'Legújabb',	name: 'offline-igfx_win_100.9864.exe' },
-	'Intel Graphics vezérlőpult'	: { version: 'Legújabb',	name: 'offline-IntelGraphicsExperience_1.100.3370.AppxBundle' }
+	'Nvidia GeForce'				: { version: 'Legújabb',	name: 'geforce.bat' },
+	'Nvidia Acer laptop'			: { version: '537.13',		name: '537.13-notebook-win10-win11-64bit-international-dch-whql.exe' },
+	'VLC'							: { version: '3.0.16',		name: 'vlc-3.0.16-win64.exe' },
+	'Office'						: { version: '2016',		name: 'office-2016.exe' },
+	'Intel HD 5500 illesztőprogram'	: { version: 'Legújabb',	name: 'win64_15.40.5171.exe' },
+	'Intel Iris X illesztőprogram'	: { version: 'Legújabb',	name: 'igfx_win_100.9864.exe' },
+	'Intel Graphics vezérlőpult'	: { version: 'Legújabb',	name: 'IntelGraphicsExperience_1.100.3370.AppxBundle' }
 };
 
 window.webApps = {
