@@ -1,5 +1,5 @@
 window.usbApps = {
-	'Nvidia GeForce'				: { version: 'Legújabb',	name: 'geforce.bat' },
+	'Nvidia GeForce'				: { version: 'Legújabb',	name: 'NVIDIA\\geforce.bat' },
 	'Nvidia Acer laptop'			: { version: '537.13',		name: '537.13-notebook-win10-win11-64bit-international-dch-whql.exe' },
 	'VLC'							: { version: '3.0.16',		name: 'vlc-3.0.16-win64.exe' },
 	'Office'						: { version: '2016',		name: 'office-2016.exe' },
