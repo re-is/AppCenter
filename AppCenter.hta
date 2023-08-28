@@ -135,30 +135,9 @@
 						setTimeout(function() {
 							// USB appok:
 							if (i < g.usbCounter) {
-								// Offline:
-								if (shl.hta.find(g.appCollection[i].pathName, 'offline-')) {
-									shl.hta.runCmd('\
-										for %%a in (D E F G H I J K L M N O P Q R S T U V W X Y Z) do vol %%a: 2>nul |find "WINDOWS" >nul && set drv=%%a:\r\n\
-										start "" "%drv%\\Apps\\general\\' + g.appCollection[i].pathName.split('offline-')[1] + '"\r\n\
-										ping 127.0.0.1 -n 2 > nul\
-									');
-									shl.obj.taskkill('cmd.exe');
-								}
-								// Online:
-								else {
-									// Letöltés:
-									let zip = shl.obj.download(g.appCollection[i].pathName, '%temp%\\' + appName + '.zip');
-									// Kibontás:
-									shl.obj.unZip(zip, appFolder);
-									// *.exe indítása:
-									shl.hta.runCmd('\
-										for /r "' + appFolder + '" %%a in (*.exe) do start "" "%%a"\r\n\
-										ping 127.0.0.1 -n 3 > nul\r\n\
-										del "' + zip + '"\
-									');
-									// Következő bejelentkezéskor törlés a ProgramFiles-ból:
-									g.wss.RegWrite('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + appName, 'cmd.exe /c rd /s /q "' + appFolder + '"');
-								}
+								let usbAppsFolder = shl.hta.pathName('folder').replace('installer', 'usbApps');
+								// CMD-vel kell indítani, a teljes hozzáférés miatt !
+								shl.hta.runCmd('"' + usbAppsFolder + g.appCollection[i].pathName + '"');
 								// Befejezés:
 								operator.innerText = '✓';
 								operator.style.color = '#0a4';
@@ -226,7 +205,7 @@
 
 					// window.usbApps kibontása:
 					shl.hta.loopIn(usbApps, function(appName, file) {
-						let pathName = (shl.obj.exist(file.name, 'offline-') ? file.name : ('https://github.com/re-is/AppCenter/raw/master/' + file.name));
+						let pathName = file.name;
 						usbhtml += ('<div class="app-items app-item-' + g.mainCounter + '" onclick="selectApp(' + g.mainCounter + ')"><div class="operators op-' + g.mainCounter + '">×</div>' + appName + '<span class="app-version">' + file.version + '</span></div>');
 						g.appCollection[g.mainCounter] = { appName: appName, pathName: pathName };
 						g.usbCounter++;
@@ -244,7 +223,7 @@
 					});
 					shl.elem.class('web-apps').innerHTML += webhtml;
 
-					// Ablak magasság beállítása (app: 23px + titles: 42px):
+					// Ablak magasság beállítása (app: 26px + titles: 42px):
 					shl.wnd.setSize(800, (((g.usbCounter > g.webCounter) ? g.usbCounter : g.webCounter) * 26) + 42);
 
 					// App lekérése registryből:
