@@ -1,11 +1,12 @@
 window.usbApps = {
-	'Nvidia GeForce'				: { version: 'Legújabb',	name: 'NVIDIA\\geforce.bat' },
-	'Nvidia Acer laptop'			: { version: '537.13',		name: '537.13-notebook-win10-win11-64bit-international-dch-whql.exe' },
-	'VLC'							: { version: '3.0.16',		name: 'vlc-3.0.16-win64.exe' },
+	'Nvidia GeForce'				: { version: 'Legújabb',	name: 'geforce.bat' },
+	'Acer laptop, Intel HD 5500'	: { version: '15.40',		name: 'Acer laptop\\win64_15.40.5171.exe' },
+	'Acer laptop, NVIDIA'			: { version: '537.13',		name: 'Acer laptop\\537.13-notebook-win10-win11-64bit-international-dch-whql.exe' },
+	'HP laptop, Intel Iris X'		: { version: '100.9864',	name: 'HP laptop\\igfx_win_100.9864.exe' },
+	'HP laptop, Intel Graphics'		: { version: '100.3370',	name: 'HP laptop\\IntelGraphicsExperience_1.100.3370.AppxBundle' },
+	'VLC'							: { version: '3.0.18',		name: 'vlc-3.0.18-win64.exe' },
 	'Office'						: { version: '2016',		name: 'office-2016.exe' },
-	'Intel HD 5500 illesztőprogram'	: { version: 'Legújabb',	name: 'win64_15.40.5171.exe' },
-	'Intel Iris X illesztőprogram'	: { version: 'Legújabb',	name: 'igfx_win_100.9864.exe' },
-	'Intel Graphics vezérlőpult'	: { version: 'Legújabb',	name: 'IntelGraphicsExperience_1.100.3370.AppxBundle' }
+	'MEGA'							: { version: 'Legújabb',	name: 'MEGAsyncSetup64.exe' }
 };
 
 window.webApps = {
