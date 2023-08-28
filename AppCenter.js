@@ -9,7 +9,7 @@ window.usbApps = {
 
 window.webApps = {
 	'Activator'						: { version: '10.2.8',		name: 'Activator.zip' },
-	'Activator UnDefender'			: { version: '10.2.8',		name: 'Activator-UnDefender.zip' },
+	'Activator UnDefender'			: { version: '10.2.8',		name: 'Activator.UnDefender.zip' },
 	'Google Chrome'					: { version: 'Legújabb',	name: 'Chrome-08.28.zip' },
 	'Firefox'						: { version: 'Legújabb',	name: 'Firefox-08.28.zip' },
 	'Any To Icon'					: { version: '12.26',		name: 'Any-12.26.zip' },
@@ -25,7 +25,7 @@ window.webApps = {
 	'Volumouse'						: { version: '08.28',		name: 'Volumouse-08.28.zip' },
 	'WinRAR'						: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
 	'WinSCP'						: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
-	'WU Switcher'					: { version: '23.08.28',	name: 'WU-Switcher-08.28.zip' },
+	'WU Switcher'					: { version: '23.08.28',	name: 'WU.Switcher-08.28.zip' },
 	'DPI + Font'					: { version: '12.29',		name: 'dpi-12.29.zip' },
 	'Context Editor'				: { version: '22.05.12',	name: 'Context-Editor.zip' },
 	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset.zip' },
