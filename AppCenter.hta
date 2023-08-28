@@ -132,56 +132,58 @@
 					// Kérdés:
 					shl.msg.confirm('Telepíted ezt?\n\n' + appName + '\n', function() {
 						overlay.style.display = 'block';
-						// USB appok:
-						if (i < g.usbCounter) {
-							// Offline:
-							if (shl.hta.find(g.appCollection[i].pathName, 'offline-')) {
-								shl.hta.runCmd('\
-									for %%a in (D E F G H I J K L M N O P Q R S T U V W X Y Z) do vol %%a: 2>nul |find "WINDOWS" >nul && set drv=%%a:\r\n\
-									start "" "%drv%\\Apps\\general\\' + g.appCollection[i].pathName.split('offline-')[1] + '"\r\n\
-									ping 127.0.0.1 -n 2 > nul\
-								');
-								shl.obj.taskkill('cmd.exe');
+						setTimeout(function() {
+							// USB appok:
+							if (i < g.usbCounter) {
+								// Offline:
+								if (shl.hta.find(g.appCollection[i].pathName, 'offline-')) {
+									shl.hta.runCmd('\
+										for %%a in (D E F G H I J K L M N O P Q R S T U V W X Y Z) do vol %%a: 2>nul |find "WINDOWS" >nul && set drv=%%a:\r\n\
+										start "" "%drv%\\Apps\\general\\' + g.appCollection[i].pathName.split('offline-')[1] + '"\r\n\
+										ping 127.0.0.1 -n 2 > nul\
+									');
+									shl.obj.taskkill('cmd.exe');
+								}
+								// Online:
+								else {
+									// Letöltés:
+									let zip = shl.obj.download(g.appCollection[i].pathName, '%temp%\\' + appName + '.zip');
+									// Kibontás:
+									shl.obj.unZip(zip, appFolder);
+									// *.exe indítása:
+									shl.hta.runCmd('\
+										for /r "' + appFolder + '" %%a in (*.exe) do start "" "%%a"\r\n\
+										ping 127.0.0.1 -n 3 > nul\r\n\
+										del "' + zip + '"\
+									');
+									// Következő bejelentkezéskor törlés a ProgramFiles-ból:
+									g.wss.RegWrite('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + appName, 'cmd.exe /c rd /s /q "' + appFolder + '"');
+								}
+								// Befejezés:
+								operator.innerText = '✓';
+								operator.style.color = '#0a4';
+								g.wss.RegWrite('HKCU\\Software\\Apps\\' + appName, 'Installed', 'REG_SZ');
+								overlay.style.display = 'none';
 							}
-							// Online:
+							// WEB appok:
 							else {
-								// Letöltés:
 								let zip = shl.obj.download(g.appCollection[i].pathName, '%temp%\\' + appName + '.zip');
 								// Kibontás:
 								shl.obj.unZip(zip, appFolder);
-								// *.exe indítása:
-								shl.hta.runCmd('\
-									for /r "' + appFolder + '" %%a in (*.exe) do start "" "%%a"\r\n\
-									ping 127.0.0.1 -n 3 > nul\r\n\
-									del "' + zip + '"\
-								');
-								// Következő bejelentkezéskor törlés a ProgramFiles-ból:
-								g.wss.RegWrite('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + appName, 'cmd.exe /c rd /s /q "' + appFolder + '"');
+								setTimeout(function() { shl.obj.del(zip) }, 2000);
+								// install fájlok futtatása:
+								if (shl.obj.exist(appFolder + '\\setup\\install.bat')) shl.hta.runCmd(appFolder + '\\setup\\install.bat');
+								if (shl.obj.exist(appFolder + '\\setup\\install.reg')) shl.hta.runReg(appFolder + '\\setup\\install.reg');
+								if (shl.obj.exist(appFolder + '\\setup\\license.txt')) g.wss.Run('notepad.exe "' + appFolder + '\\setup\\license.txt"');
+								// Parancsikon másolása az asztalra:
+								shl.hta.runCmd('xcopy "' + appFolder + '\\setup\\*.lnk" "%userprofile%\\Desktop\\"');
+								// Befejezés:
+								operator.innerText = '✓';
+								operator.style.color = '#0a4';
+								g.wss.RegWrite('HKCU\\Software\\Apps\\' + appName, 'Installed', 'REG_SZ');
+								overlay.style.display = 'none';
 							}
-							// Befejezés:
-							operator.innerText = '✓';
-							operator.style.color = '#0a4';
-							g.wss.RegWrite('HKCU\\Software\\Apps\\' + appName, 'Installed', 'REG_SZ');
-							overlay.style.display = 'none';
-						}
-						// WEB appok:
-						else {
-							let zip = shl.obj.download(g.appCollection[i].pathName, '%temp%\\' + appName + '.zip');
-							// Kibontás:
-							shl.obj.unZip(zip, appFolder);
-							setTimeout(function() { shl.obj.del(zip) }, 2000);
-							// install fájlok futtatása:
-							if (shl.obj.exist(appFolder + '\\setup\\install.bat')) shl.hta.runCmd(appFolder + '\\setup\\install.bat');
-							if (shl.obj.exist(appFolder + '\\setup\\install.reg')) shl.hta.runReg(appFolder + '\\setup\\install.reg');
-							if (shl.obj.exist(appFolder + '\\setup\\license.txt')) g.wss.Run('notepad.exe "' + appFolder + '\\setup\\license.txt"');
-							// Parancsikon másolása az asztalra:
-							shl.hta.runCmd('xcopy "' + appFolder + '\\setup\\*.lnk" "%userprofile%\\Desktop\\"');
-							// Befejezés:
-							operator.innerText = '✓';
-							operator.style.color = '#0a4';
-							g.wss.RegWrite('HKCU\\Software\\Apps\\' + appName, 'Installed', 'REG_SZ');
-							overlay.style.display = 'none';
-						}
+						}, 20);
 					});
 				}
 				//----------------------------------------------------------------------------------
@@ -189,16 +191,18 @@
 				//----------------------------------------------------------------------------------
 				else shl.msg.confirm('Biztos, hogy eltávolítod ezt?\n\n' + appName + '\n', function() {
 					overlay.style.display = 'block';
-					if (shl.obj.exist(appFolder + '\\setup\\uninstall.bat')) shl.hta.runCmd(appFolder + '\\setup\\uninstall.bat');
-					if (shl.obj.exist(appFolder + '\\setup\\uninstall.reg')) shl.hta.runReg(appFolder + '\\setup\\uninstall.reg');
 					setTimeout(function() {
-						g.wss.RegDelete('HKCU\\Software\\Apps\\' + appName);
-						g.wss.RegWrite('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + appName, 'cmd.exe /c rd /s /q "' + appFolder + '"');
-						shl.elem.class('app-item-' + i).onclick = function() { shl.msg.ok('Az újratelepítéshez ki kell jelentkezni!') };
-						operator.innerText = '⮜';
-						operator.style.color = '#26d';
-						overlay.style.display = 'none';
-					}, 1000);
+						if (shl.obj.exist(appFolder + '\\setup\\uninstall.bat')) shl.hta.runCmd(appFolder + '\\setup\\uninstall.bat');
+						if (shl.obj.exist(appFolder + '\\setup\\uninstall.reg')) shl.hta.runReg(appFolder + '\\setup\\uninstall.reg');
+						setTimeout(function() {
+							g.wss.RegDelete('HKCU\\Software\\Apps\\' + appName);
+							g.wss.RegWrite('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Delete-' + appName, 'cmd.exe /c rd /s /q "' + appFolder + '"');
+							shl.elem.class('app-item-' + i).onclick = function() { shl.msg.ok('Az újratelepítéshez ki kell jelentkezni!') };
+							operator.innerText = '⮜';
+							operator.style.color = '#26d';
+							overlay.style.display = 'none';
+						}, 1000);
+					}, 20);
 				});
 			}
 
