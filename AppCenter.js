@@ -9,7 +9,7 @@ window.usbApps = {
 
 window.webApps = {
 	'Activator'						: { version: '10.2.8',		name: 'Activator.zip' },
-	'Activator No.Defender'			: { version: '10.2.8',		name: 'Activator.No.Defender.zip' },
+	'Activator UnDefender'			: { version: '10.2.8',		name: 'Activator-UnDefender.zip' },
 	'Google Chrome'					: { version: 'Legújabb',	name: 'Chrome-08.28.zip' },
 	'Firefox'						: { version: 'Legújabb',	name: 'Firefox-08.28.zip' },
 	'Any To Icon'					: { version: '12.26',		name: 'Any-12.26.zip' },
