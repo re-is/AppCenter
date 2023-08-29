@@ -9,7 +9,7 @@
 
 			html * {
 				font-family: "Tahoma", sans-serif;
-				font-size: 18px;
+				font-size: 2vw;
 				color: #333;
 			}
 
@@ -26,51 +26,63 @@
 
 			.apps-blocks {
 				width: 50%;
-				margin: 8px;
+				margin: 0.5vw;
 			}
 
 				.titles {
-					height: 22px;
-					padding-left: 5px;
-					padding-top: 2px;
-					margin-bottom: 2px;
+					height: 3vw;
+					line-height: 3vw;
+					padding-left: 1vw;
+					margin-bottom: 0.5vw;
 					background-color: #ddd;
-					border-radius: 3px;
+					border-radius: 0.5vw;
 					font-family: "Ebrima";
-					font-size: 16px;
 					font-weight: bold;
 				}
 
 				.app-items {
-					padding-left: 6px;
-					height: 26px;
-					line-height: 26px;
-					border-radius: 3px;
+					padding-left: 1vw;
+					border-radius: 0.5vw;
+					height: 3vw;
+					line-height: 3vw;
 					cursor: pointer;
+					transition: 100ms;
 				}
 
 					.app-version {
 						color: #777;
 						font-style: italic;
 						float: right;
-						padding-right: 10px;
+						padding-right: 1vw;
 					}
 
-					.app-items:hover, .app-items:hover .app-version {
-						background-color: #555;
-						color: #fff;
-					}
+					.app-items:hover { color: #fff; background-color: #555 }
+					.app-items:hover .app-version { color: #fff }
 
 				.operators {
 					display: inline-block;
 					width: 15px;
-					line-height: 0px;
+					height: 100%;
+					line-height: 100%;
 					text-align: center;
-					margin-right: 5px;
+					margin-right: 0.5vw;
 					font-family: "Ebrima";
 					font-weight: bold;
+					font-size: 2.2vw;
 					color: #d32;
 				}
+
+			#check-list {
+				position: fixed;
+				left: 1vw;
+				bottom: 1vw;
+				padding: 0.5vw 1vw;
+				background-color: #3a5;
+				color: #fff;
+				border-radius: 0.5vw;
+				cursor: pointer;
+				transition: 100ms;
+			}	#check-list:hover { background-color: #555 }
 
 			#overlay {
 				position: absolute;
@@ -88,6 +100,7 @@
 		<div id="Application">
 			<div class="apps-blocks usb-apps"><div class="titles">USB</div></div>
 			<div class="apps-blocks web-apps"><div class="titles">WEB</div></div>
+			<div id="check-list" onclick="showCL();">Check-lista</div>
 			<div id="overlay"></div>
 		</div>
 		<script type="text/javascript">
@@ -185,14 +198,27 @@
 				});
 			}
 
+			function showCL() {
+				shl.hta.runCmd('\r\n\
+				   Windows telepítési sorrend\r\n\r\n\
+				   1) A telepítés közben ne legyen net, hogy az Update ne kezdjen el frissíteni\r\n\
+				   2) USB-n lévő Runas.bat futtatása Adminként\r\n\
+				   3) Monitor illesztőprogramok telepítése\r\n\
+				   4) Office 2016 és ezt frissíteni, majd kikapcsolni a Fiók menüből\r\n\
+				   5) "Adatforgalom" átállítása korlátlanra, különben nem fogja letölteni a nagy fájlokat\r\n\
+				   6) Tisztogatás (CCleaner, Defrag)\r\n\
+				   7) Windows Update futtatása, majd tisztogatás után kikapcsolni (WU Switcher)\r\n\
+				   8) Aktiválás', '', true);
+			}
+
 			// Megnyitás:
 			shl.wnd.open({
 				icon		: 'https://raw.githubusercontent.com/re-is/AppCenter/master/center.ico',
 				title		: 'AppCenter',
 				type		: 'tool',
 				titlebar	: true,
-				width		: 800,
-				height		: 40,
+				width		: '50vw',
+				height		: '2vw',
 				fadein		: [300, 300]
 			}, function(opened, loaded) {
 
@@ -223,8 +249,9 @@
 					});
 					shl.elem.class('web-apps').innerHTML += webhtml;
 
-					// Ablak magasság beállítása (app: 26px + titles: 42px):
-					shl.wnd.setSize(800, (((g.usbCounter > g.webCounter) ? g.usbCounter : g.webCounter) * 26) + 42);
+					// Ablak magasság beállítása ( app-items magasság: 3vw + titles magasság: 3.5vw + margin: 1vw):
+					let width = shl.wnd.getSize()[0], vw = function(v) { return (width * (v * 0.01)) };
+					shl.wnd.setSize(width, (((g.usbCounter > g.webCounter) ? g.usbCounter : g.webCounter) * vw(3)) + vw(4.5));
 
 					// App lekérése registryből:
 					shl.hta.loopPlus(g.mainCounter, function(i) {
