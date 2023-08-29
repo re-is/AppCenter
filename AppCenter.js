@@ -6,14 +6,14 @@ window.usbApps = {
 	'HP laptop, Intel Graphics'		: { version: '100.3370',	name: 'HP laptop\\IntelGraphicsExperience_1.100.3370.AppxBundle' },
 	'VLC'							: { version: '3.0.18',		name: 'vlc-3.0.18-win64.exe' },
 	'Office'						: { version: '2016',		name: 'office-2016.exe' },
-	'MEGA'							: { version: 'Legújabb',	name: 'MEGAsyncSetup64.exe' }
+	'MEGA'							: { version: 'Legújabb',	name: 'MEGAsyncSetup64.exe' },
+	'Firefox'						: { version: 'Legújabb',	name: 'Browsers\\Firefox Installer.exe' },
+	'Google Chrome'					: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' }
 };
 
 window.webApps = {
 	'Activator'						: { version: '10.2.8',		name: 'Activator.zip' },
 	'Activator UnDefender'			: { version: '10.2.8',		name: 'Activator.UnDefender.zip' },
-	'Google Chrome'					: { version: 'Legújabb',	name: 'Chrome-08.28.zip' },
-	'Firefox'						: { version: 'Legújabb',	name: 'Firefox-08.28.zip' },
 	'Any To Icon'					: { version: '12.26',		name: 'Any-12.26.zip' },
 	'AutoIt'						: { version: '23.08.28',	name: 'AutoIt-08.28.zip' },
 	'CCleaner'						: { version: '5.83',		name: 'CCleaner.09.08.zip' },
