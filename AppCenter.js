@@ -8,7 +8,7 @@ window.usbApps = {
 	'Office'						: { version: '2016',		name: 'office-2016.exe' },
 	'MEGA'							: { version: 'Legújabb',	name: 'MEGAsyncSetup64.exe' },
 	'Firefox'						: { version: 'Legújabb',	name: 'Browsers\\Firefox Installer.exe' },
-	'Google Chrome'					: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' }
+	'Chrome'						: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' }
 };
 
 window.webApps = {
