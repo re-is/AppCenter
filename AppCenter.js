@@ -23,12 +23,11 @@ window.webApps = {
 	'Photo Filter 10'				: { version: '12.26',		name: 'Photo-12.26.zip' },
 	'Resource Hacker'				: { version: '12.26',		name: 'ResHacker-12.26.zip' },
 	'Sublime Text 3'				: { version: '23.08.28',	name: 'Sublime-08.28.zip' },
-	'uTorrent'						: { version: '11.15',		name: 'uTorrent-11.15.zip' },
 	'Volumouse'						: { version: '08.28',		name: 'Volumouse-08.28.zip' },
 	'WinRAR'						: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
 	'WinSCP'						: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
 	'WU Switcher'					: { version: '23.08.28',	name: 'WU.Switcher-08.28.zip' },
-	'DPI + Font'					: { version: '12.29',		name: 'dpi-12.29.zip' },
+	'Fonter'						: { version: '23.09.12',	name: 'Fonter-09.12.zip' },
 	'Context Editor'				: { version: '22.05.12',	name: 'Context-Editor.zip' },
 	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset.zip' },
 	'ESET Copier'					: { version: '21.07.08',	name: 'ESET-Copier-21.0708.zip' }
