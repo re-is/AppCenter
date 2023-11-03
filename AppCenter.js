@@ -8,7 +8,9 @@ window.usbApps = {
 	'Office'						: { version: '2016',		name: 'office-2016.exe' },
 	'MEGA'							: { version: 'Legújabb',	name: 'MEGAsyncSetup64.exe' },
 	'Firefox'						: { version: 'Legújabb',	name: 'Browsers\\Firefox Installer.exe' },
-	'Chrome'						: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' }
+	'Chrome'						: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' },
+	'uTorrent'						: { version: '2.2',			name: 'utorrent_2.2.exe' },
+	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset_smart_security_premium_live_installer.exe' }
 };
 
 window.webApps = {
@@ -27,7 +29,5 @@ window.webApps = {
 	'WinSCP'						: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
 	'WU Switcher'					: { version: '23.09.15',	name: 'WU-Switcher-09.15.zip' },
 	'Fonter'						: { version: '23.09.15',	name: 'Fonter-09.15.zip' },
-	'Context Editor'				: { version: '22.05.12',	name: 'Context-Editor.zip' },
-	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset.zip' },
-	'ESET Copier'					: { version: '21.07.08',	name: 'ESET-Copier-21.0708.zip' }
+	'Context Editor'				: { version: '22.05.12',	name: 'Context-Editor.zip' }
 };
