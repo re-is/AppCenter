@@ -5,13 +5,13 @@ window.usbApps = {
 	'HP laptop, Intel Graphics'		: { version: '100.3370',	name: 'HP laptop\\IntelGraphicsExperience_1.100.3370.AppxBundle' },
 	'HP laptop, Intel Iris X'		: { version: '100.9864',	name: 'HP laptop\\igfx_win_100.9864.exe' },
 	'VLC'							: { version: '3.0.18',		name: 'vlc-3.0.18-win64.exe' },
-	'Office'						: { version: '2016',		name: 'office-2016.exe' },
+	//'Office'						: { version: '2016',		name: 'office-2016.exe' },
+	'Office 21'						: { version: '2021',		name: 'Office-2021\\installer.bat' },
 	'MEGA'							: { version: 'Legújabb',	name: 'MEGAsyncSetup64.exe' },
 	'Firefox'						: { version: 'Legújabb',	name: 'Browsers\\Firefox Installer.exe' },
 	'Chrome'						: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' },
 	'uTorrent'						: { version: '2.2',			name: 'utorrent_2.2.exe' },
-	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset_smart_security_premium_live_installer.exe' },
-	'Office 21'						: { version: '2021',		name: 'Office-2021\\installer.bat' }
+	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset_smart_security_premium_live_installer.exe' }
 };
 
 window.webApps = {
