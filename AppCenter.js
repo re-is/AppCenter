@@ -11,7 +11,7 @@ window.usbApps = {
 	'Chrome'						: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' },
 	'uTorrent'						: { version: '2.2',			name: 'utorrent_2.2.exe' },
 	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset_smart_security_premium_live_installer.exe' },
-	'Office 21'						: { version: '2021',		name: 'Office-2021\\setup.exe', arg: ' /configure conf.xml' }
+	'Office 21'						: { version: '2022',		name: 'Office-2021\\installer.js' }
 };
 
 window.webApps = {
