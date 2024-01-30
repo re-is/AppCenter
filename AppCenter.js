@@ -10,7 +10,8 @@ window.usbApps = {
 	'Firefox'						: { version: 'Legújabb',	name: 'Browsers\\Firefox Installer.exe' },
 	'Chrome'						: { version: 'Legújabb',	name: 'Browsers\\ChromeSetup.exe' },
 	'uTorrent'						: { version: '2.2',			name: 'utorrent_2.2.exe' },
-	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset_smart_security_premium_live_installer.exe' }
+	'ESET Smart Security'			: { version: 'Legújabb',	name: 'eset_smart_security_premium_live_installer.exe' },
+	'Office 21'						: { version: '2.2',			name: 'Office-2021\\setup.exe /configure conf.xml' }
 };
 
 window.webApps = {
