@@ -35,12 +35,12 @@ window.webApps = {
 
 window.checkList = '\r\n\
    Windows telepítési sorrend\r\n\r\n\
-   1) A telepítés közben a nyelválasztáskor Shift+F10 és beírni: oobe\\bypassnro\r\n\
-   2) Fiók típus kiválasztáskor: ipconfig /release\r\n\
-   3) Fiók név megadása után: ipconfig /renew\r\n\r\n\
+   1) A telepítés közben a nyelválasztáskor Shift+F10 és beírni: oobe\\BypassNRO.cmd\r\n\
+   2) Eszköznév megadásakor: ipconfig /release\r\n\
+   3) Fióknév megadásakor: ipconfig /renew\r\n\r\n\
    4) USB-n lévő Runas.bat futtatása Adminként\r\n\
-   5) Monitor illesztőprogramok telepítése\r\n\
-   6) "Adatforgalom" átállítása korlátlanra, különben nem fogja letölteni a nagy fájlokat\r\n\r\n\
+   5) Monitor illesztőprogram telepítése\r\n\
+   6) Mobil "Adatforgalom" átállítása korlátlanra, különben nem fogja letölteni a nagy fájlokat\r\n\r\n\
    7) Office 2021 és a Fiók menüből frissíteni, utána kikapcsolni\r\n\
    8) Tisztogatás\r\n\
    9) Windows Update futtatása, utána kikapcsolni (WU Switcher)\r\n\
