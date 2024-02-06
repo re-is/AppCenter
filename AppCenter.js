@@ -5,7 +5,6 @@ window.usbApps = {
 	'HP laptop, Intel Graphics'		: { version: '100.3370',	name: 'HP laptop\\IntelGraphicsExperience_1.100.3370.AppxBundle' },
 	'HP laptop, Intel Iris X'		: { version: '100.9864',	name: 'HP laptop\\igfx_win_100.9864.exe' },
 	'VLC'							: { version: '3.0.18',		name: 'vlc-3.0.18-win64.exe' },
-	//'Office'						: { version: '2016',		name: 'office-2016.exe' },
 	'Office 21'						: { version: '2021',		name: 'Office-2021\\installer.bat' },
 	'MEGA'							: { version: 'Legújabb',	name: 'MEGAsyncSetup64.exe' },
 	'Firefox'						: { version: 'Legújabb',	name: 'Browsers\\Firefox Installer.exe' },
@@ -28,23 +27,22 @@ window.webApps = {
 	'Volumouse'						: { version: '08.28',		name: 'Volumouse-08.28.zip' },
 	'WinRAR'						: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
 	'WinSCP'						: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
-	'WU Switcher'					: { version: '23.09.15',	name: 'WU-Switcher-09.15.zip' },
+	'WU Switcher'					: { version: '24.02.06',	name: 'WU-switcher-02.06.zip' },
 	'Fonter'						: { version: '23.09.15',	name: 'Fonter-09.15.zip' },
 	'Context Editor'				: { version: '22.05.12',	name: 'Context-Editor.zip' }
 };
 
 window.checkList = '\r\n\
    Windows telepítési sorrend\r\n\r\n\
-   1) A telepítés közben a nyelválasztáskor Shift+F10 és beírni: oobe\\BypassNRO.cmd\r\n\
-   2) Eszköznév megadásakor: ipconfig /release\r\n\
-   3) Fióknév megadásakor: ipconfig /renew\r\n\r\n\
-   4) USB-n lévő Runas.bat futtatása Adminként\r\n\
-   5) Monitor illesztőprogram telepítése\r\n\
-   6) Mobil "Adatforgalom" átállítása korlátlanra, különben nem fogja letölteni a nagy fájlokat\r\n\r\n\
+   1) Eszköznév megadásakor: ipconfig /release\r\n\
+   2) Fióknév megadásakor: ipconfig /renew\r\n\r\n\
+   3) Edge megnyitása és beállítása\r\n\
+   4) Mobil "Adatforgalom" átállítása korlátlanra, különben nem fogja letölteni a nagy fájlokat\r\n\
+   5) Windows Update futtatása\r\n\r\n\
+   6) USB-n lévő Runas.bat futtatása Adminként\r\n\
    7) Office 2021 és a Fiók menüből frissíteni, utána kikapcsolni\r\n\
-   8) Tisztogatás\r\n\
-   9) Windows Update futtatása, utána kikapcsolni (WU Switcher)\r\n\
-   10) Tisztogatás\r\n\
-   11) Aktiválás\r\n\r\n\
+   8) Windows Update kikapcsolása, SoftwareDistribution törlése\r\n\
+   9) Tisztogatás\r\n\
+   10) Aktiválás\r\n\r\n\
    Értesítések és auto defrag kikapcsolása\r\n\
    Energiaellátás beállítása';
