@@ -27,7 +27,7 @@ window.webApps = {
 	'Volumouse'						: { version: '08.28',		name: 'Volumouse-08.28.zip' },
 	'WinRAR'						: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
 	'WinSCP'						: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
-	'WU Switcher'					: { version: '24.04.02',	name: 'WU-switcher-04.02.zip' },
+	'WU Switcher'					: { version: '24.04.17',	name: 'WUswitcher-04.17.zip' },
 	'Fonter'						: { version: '23.09.15',	name: 'Fonter-09.15.zip' },
 	'Context Editor'				: { version: '22.05.12',	name: 'Context-Editor.zip' }
 };
