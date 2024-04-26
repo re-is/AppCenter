@@ -17,7 +17,7 @@ window.webApps = {
 	'Activator'			: { version: '24.04.26',	name: 'Activator-04.26.zip' },
 	'Any To Icon'			: { version: '12.26',		name: 'Any-12.26.zip' },
 	'AutoIt'			: { version: '23.08.28',	name: 'AutoIt-08.28.zip' },
-	'CCleaner'			: { version: '5.83',		name: 'CCleaner.09.08.zip' },
+	'CCleaner'			: { version: '6.23',		name: 'CCleaner-623-04.26.zip' },
 	'DiskInfo'			: { version: '8.12.8',		name: 'DiskInfo-08.28.zip' },
 	'Defrag'			: { version: '12.26',		name: 'Defrag-12.26.zip' },
 	'WinPlus'			: { version: '11.18',		name: 'WinPlus-11.18.zip' },
