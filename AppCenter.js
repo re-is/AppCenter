@@ -14,7 +14,7 @@ window.usbApps = {
 };
 
 window.webApps = {
-	'Activator'			: { version: '24.04.26',	name: 'Activator-04.26.zip' },
+	'Activator'			: { version: '24.04.28',	name: 'Activator-04.28.zip' },
 	'Any To Icon'			: { version: '12.26',		name: 'Any-12.26.zip' },
 	'AutoIt'			: { version: '23.08.28',	name: 'AutoIt-08.28.zip' },
 	'CCleaner'			: { version: '6.23',		name: 'CCleaner-623-04.26.zip' },
