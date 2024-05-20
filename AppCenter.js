@@ -15,19 +15,19 @@ window.usbApps = {
 
 window.webApps = {
 	'Activator'			: { version: '24.04.30',	name: 'Activator-04.30.zip' },
-	'Any To Icon'			: { version: '12.26',		name: 'Any-12.26.zip' },
-	'AutoIt'			: { version: '23.08.28',	name: 'AutoIt-08.28.zip' },
+	'WU Switcher'			: { version: '24.04.30',	name: 'WU-switcher-04.30.zip' },
 	'CCleaner'			: { version: '6.23',		name: 'CCleaner-623-04.26.zip' },
 	'DiskInfo'			: { version: '8.12.8',		name: 'DiskInfo-08.28.zip' },
+	'Volumouse'			: { version: '08.28',		name: 'Volumouse-08.28.zip' },
+	'WinRAR'			: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
 	'Defrag'			: { version: '12.26',		name: 'Defrag-12.26.zip' },
+	'WinSCP'			: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
+	'Any To Icon'			: { version: '12.26',		name: 'Any-12.26.zip' },
+	'AutoIt'			: { version: '23.08.28',	name: 'AutoIt-08.28.zip' },
 	'WinPlus'			: { version: '11.18',		name: 'WinPlus-11.18.zip' },
 	'Photo Filter 10'		: { version: '12.26',		name: 'Photo-12.26.zip' },
 	'Resource Hacker'		: { version: '12.26',		name: 'ResHacker-12.26.zip' },
 	'Sublime Text 4'		: { version: '24.04.30',	name: 'Sublime-4169-04.30.zip' },
-	'Volumouse'			: { version: '08.28',		name: 'Volumouse-08.28.zip' },
-	'WinRAR'			: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
-	'WinSCP'			: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
-	'WU Switcher'			: { version: '24.04.30',	name: 'WU-switcher-04.30.zip' },
 	'Fonter'			: { version: '23.09.15',	name: 'Fonter-09.15.zip' },
 	'Context Editor'		: { version: '22.05.12',	name: 'Context-Editor.zip' }
 };
@@ -45,11 +45,11 @@ window.checkList = '\r\n\
 	\r\n\
    -> USB-n lévő Runas.bat futtatása Adminként\r\n\
    -> Office 2021 és a Fiók menüből frissíteni, utána kikapcsolni\r\n\
-   -> Windows Update kikapcsolása, SoftwareDistribution törlése ( C: -> Tulajdonságok -> Lemezkarbantartó )\r\n\
+   -> Windows Update kikapcsolása, SoftwareDistribution törlése, C: -> Tulajdonságok -> Lemezkarbantartó\r\n\
    -> Tisztogatás\r\n\
    -> Aktiválás\r\n\
 	\r\n\
-   -> Chrome telepítése után, Egyebek mappában lévő .reg fájl hozzáadása\r\n\
+   -> Chrome telepítése és beállítása után Egyebek mappában lévő .reg fájl hozzáadása\r\n\
    -> Fájltársítások kipróbálása\r\n\
-   -> Értesítések és auto defrag kikapcsolása\r\n\
+   -> Windows és Defender értesítések és auto defrag kikapcsolása\r\n\
    -> Energiaellátás beállítása';
