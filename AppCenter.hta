@@ -172,8 +172,8 @@
 								if (shl.obj.exist(appFolder + '\\setup\\install.bat')) shl.hta.runCmd(appFolder + '\\setup\\install.bat');
 								if (shl.obj.exist(appFolder + '\\setup\\install.reg')) shl.hta.runReg(appFolder + '\\setup\\install.reg');
 								if (shl.obj.exist(appFolder + '\\setup\\license.txt')) g.wss.Run('notepad.exe "' + appFolder + '\\setup\\license.txt"');
-								// Parancsikon másolása az asztalra:
-								shl.hta.runCmd('xcopy "' + appFolder + '\\setup\\*.lnk" "%userprofile%\\Desktop\\"');
+								// Parancsikon másolása az Asztalra:
+								shl.hta.runCmd('xcopy "' + appFolder + '\\setup\\*.lnk" "%UserProfile%\\Desktop\\"');
 								// Befejezés:
 								operator.innerText = '✓';
 								operator.style.color = '#0a4';
@@ -189,6 +189,18 @@
 				else shl.msg.confirm('Biztos, hogy eltávolítod ezt?\n\n' + appName + '\n', function() {
 					overlay.style.display = 'block';
 					setTimeout(function() {
+						// Parancsikon törlése az Asztalról:
+						shl.hta.runCmd('@echo off\r\n\
+							mode con:cp select=65001 > nul\r\n\
+							rem Parancsikon kikérése, szóközzel is:\r\n\
+							cd /d "' + appFolder + '\\setup"\r\n\
+							set "name=none" & for /f "tokens=4*" %%A in (\'dir ^| findstr ".lnk"\') do set "name=%%B"\r\n\
+							rem Ha nincs parancsikon az AppFolder-ben, akkor kilépés:\r\n\
+							if %name% equ none exit\r\n\
+							rem Törlés az Asztalról:\r\n\
+							cd /d "%UserProfile%\\Desktop"\r\n\
+							for /f "tokens=*" %%x in (\'dir ^| find "%name%"\') do del %%x');
+						// uninstall fájlok futtatása:
 						if (shl.obj.exist(appFolder + '\\setup\\uninstall.bat')) shl.hta.runCmd(appFolder + '\\setup\\uninstall.bat');
 						if (shl.obj.exist(appFolder + '\\setup\\uninstall.reg')) shl.hta.runReg(appFolder + '\\setup\\uninstall.reg');
 						setTimeout(function() {
