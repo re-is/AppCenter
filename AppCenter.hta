@@ -194,12 +194,12 @@
 							mode con:cp select=65001 > nul\r\n\
 							rem Parancsikon kikérése, szóközzel is:\r\n\
 							cd /d "' + appFolder + '\\setup"\r\n\
-							set "name=none" & for /f "tokens=4*" %%A in (\'dir ^| findstr ".lnk"\') do set "name=%%B"\r\n\
+							set "name=none" & for /f "tokens=*" %%x in (\'dir /b ^| find ".lnk"\') do set "name=%%x"\r\n\
 							rem Ha nincs parancsikon az AppFolder-ben, akkor kilépés:\r\n\
-							if %name% equ none exit\r\n\
+							if "%name%" equ "none" exit\r\n\
 							rem Törlés az Asztalról:\r\n\
 							cd /d "%UserProfile%\\Desktop"\r\n\
-							for /f "tokens=*" %%x in (\'dir ^| find "%name%"\') do del %%x');
+							for /f "tokens=*" %%x in (\'dir /b ^| find "%name%"\') do del "%%x"');
 						// uninstall fájlok futtatása:
 						if (shl.obj.exist(appFolder + '\\setup\\uninstall.bat')) shl.hta.runCmd(appFolder + '\\setup\\uninstall.bat');
 						if (shl.obj.exist(appFolder + '\\setup\\uninstall.reg')) shl.hta.runReg(appFolder + '\\setup\\uninstall.reg');
