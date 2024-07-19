@@ -15,7 +15,7 @@ window.usbApps = {
 
 window.webApps = {
 	'Activator'			: { version: '24.05.23',	name: 'Activator-05.23.zip' },
-	'WU Switcher'			: { version: '24.07.20',	name: 'WU-switcher-07.20.zip' },
+	'WU Switcher'			: { version: '24.07.19',	name: 'WU-switcher-07.19.zip' },
 	'BleachBit'			: { version: '4.6.0',		name: 'BleachBit-07.19.zip' },
 	'CCleaner'			: { version: '6.23',		name: 'CCleaner-623-04.26.zip' },
 	'DiskInfo'			: { version: '8.12.8',		name: 'DiskInfo-08.28.zip' },
