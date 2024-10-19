@@ -18,7 +18,7 @@ window.webApps = {
 	'WU Switcher'			: { version: '24.07.21',	name: 'WU-switcher-07-21.zip' },
 	'BleachBit'			: { version: '4.6.0',		name: 'BleachBit-07.19.zip' },
 	'CCleaner'			: { version: '6.23',		name: 'CCleaner-623-04.26.zip' },
-	'DiskInfo'			: { version: '8.12.8',		name: 'DiskInfo-08.28.zip' },
+	'DiskInfo'			: { version: '9.4.4',		name: 'DiscInfo-9.4.4.zip' },
 	'Volumouse'			: { version: '08.28',		name: 'Volumouse-08.28.zip' },
 	'WinRAR'			: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
 	'Defrag'			: { version: '12.26',		name: 'Defrag-12.26.zip' },
