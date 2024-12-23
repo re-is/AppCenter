@@ -14,7 +14,7 @@ window.usbApps = {
 };
 
 window.webApps = {
-	'Activator'			: { version: '24.05.23',	name: 'Activator-05.23.zip' },
+	'Activator'			: { version: '24.12.23',	name: 'Activator-12.23.zip' },
 	'WU Switcher'			: { version: '24.07.21',	name: 'WU-switcher-07-21.zip' },
 	'BleachBit'			: { version: '4.6.2',		name: 'BleachBit-12.20.zip' },
 	'DiskInfo'			: { version: '9.4.4',		name: 'DiscInfo-9.4.4.zip' },
