@@ -20,14 +20,13 @@ window.webApps = {
 	'DiskInfo'			: { version: '9.4.4',		name: 'DiscInfo-9.4.4.zip' },
 	'Volumouse'			: { version: '08.28',		name: 'Volumouse-08.28.zip' },
 	'WinRAR'			: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
-	'Defrag'			: { version: '12.26',		name: 'Defrag-12.26.zip' },
 	'WinSCP'			: { version: '23.08.28',	name: 'WinSCP-08.28.zip' },
 	'Any To Icon'			: { version: '12.26',		name: 'Any-12.26.zip' },
 	'AutoIt'			: { version: '23.08.28',	name: 'AutoIt-08.28.zip' },
 	'WinPlus'			: { version: '11.18',		name: 'WinPlus-11.18.zip' },
 	'Photo Filter 10'		: { version: '12.26',		name: 'Photo-12.26.zip' },
 	'Resource Hacker'		: { version: '12.26',		name: 'ResHacker-12.26.zip' },
-	'Sublime Text 4'		: { version: '26.04.20',	name: 'Sublime-04.20.zip' },
+	'Sublime Text 4'		: { version: '26.04.27',	name: 'Sublime-04.27.zip' },
 	'Fonter'			: { version: '23.09.15',	name: 'Fonter-09.15.zip' },
 	'Context Editor'		: { version: '22.05.12',	name: 'Context-Editor.zip' }
 };
