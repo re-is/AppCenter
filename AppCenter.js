@@ -16,7 +16,7 @@ window.usbApps = {
 window.webApps = {
 	'Activator'			: { version: '24.12.23',	name: 'Activator-12.23.zip' },
 	'WU Switcher'			: { version: '24.07.21',	name: 'WU-switcher-07-21.zip' },
-	'BleachBit'			: { version: '4.6.2',		name: 'BleachBit-12.20.zip' },
+	'BleachBit'			: { version: '6.0.0',		name: 'BleachBit-6.0.0.zip' },
 	'DiskInfo'			: { version: '9.4.4',		name: 'DiscInfo-9.4.4.zip' },
 	'Volumouse'			: { version: '08.28',		name: 'Volumouse-08.28.zip' },
 	'WinRAR'			: { version: '12.26',		name: 'Win-Rar-12.26.zip' },
