@@ -26,7 +26,7 @@ window.webApps = {
 	'WinPlus'			: { version: '11.18',		name: 'WinPlus-11.18.zip' },
 	'Photo Filter 10'		: { version: '12.26',		name: 'Photo-12.26.zip' },
 	'Resource Hacker'		: { version: '12.26',		name: 'ResHacker-12.26.zip' },
-	'Sublime Text 4'		: { version: '26.06.04',	name: 'Sublime-06.04.zip' },
+	'Sublime Text 4'		: { version: '26.07.12',	name: 'Sublime-07.12.zip' },
 	'Fonter'			: { version: '23.09.15',	name: 'Fonter-09.15.zip' },
 	'Context Editor'		: { version: '22.05.12',	name: 'Context-Editor.zip' }
 };
